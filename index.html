@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        .Font-serif{
+            font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body class="bg-[#121417] ">
+    
+    <div class="container_main relative">
+        <div class=" h-[30vh]  bg-white items-center justify-center flex flex-col gap-8 text-black w-[40px] fixed top-[50%] right-0">
+            <div class="font-semibold text-2xl">W<span class="text-4xl">.</span></div>
+            <div class="rotate-[90deg] font-semibold">
+                Nominee
+            </div>
+        </div>
+        <nav class="z-[99] navbar flex justify-between backdrop-blur-xl sticky top-0 px-11 py-6 border-b border-white/10">
+            <div class=" logo flex gap-5 text-white items-center">
+                <h1 class="text-white/90 text-sm">
+                    Kristian Ulrych
+                </h1>
+                <h1 class="text-white/70 text-sm">
+                    Digital Product Designer
+                </h1>
+            </div>
+            <div>
+                <ul class=" Iconlist flex g gap-2 items-center">
+                    <li>
+                        <a href="" class="text-white/70 text-[16px] text-semibold px-5 py-2">Work</a>
+                    </li>
+                    <li><a href="" class="text-white/70 text-[16px] text-semibold px-5 py-2">About</a></li>
+                    <li><Button class="px-5  py-1.5 rounded-full border text-[16px] border-white/80 text-white flex items-center gap-2 ">En <i class="bi bi-chevron-down"></i></Button></li>
+                    <li><Button class="px-10 text-[16px] py-1.5 rounded-full border border-black/10 hover:border-white/80 bg-white text-black hover:text-white hover:bg-black transition-all duration-300" >Get in touch</Button></li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <!-- intro of the website -->
+        <main>
+            <!-- herotext secition -->
+            <div class="py-10   px-11">
+                <h1 class="HeroText text-white text-[12vh]  Font-serif leading-[13vh]">
+                    <span class="inline-block">Designer based in</span>
+                    <span class="inline-block underline decoration-2 underline-offset-8 decoration-indigo-600 bg-gradient-to-br from-indigo-100 via-80% via-indigo-500 to-indigo-900 text-transparent bg-clip-text italic opacity-80">
+                    Prague.
+                    </span>
+                    <br>
+                    <span class="inline-block">Shaping digital products,</span><br>
+                    <span class="inline-block">websites and design systems</span><br>
+                    <span class="inline-block">with clarity and character.</span>
+                </h1>
+                <!-- image and text section -->
+                <div class="flex h-screen mt-20">
+                    <!-- text -->
+                    <div class="w-full h-fit gap-2 grid grid-cols-2  ">
+                        <div class="list flex flex-col ">
+                            <span class="text-white/40 text-[12px] font-semibold">BASED</span>
+                            <span class="text-white font-semibold">Prague,Czechia</span>
+                        </div>
+                        <div class="list flex flex-col ">
+                            <span class="text-white/40 text-[12px] font-semibold">FOCUS</span>
+                            <span class="text-white font-semibold">Product UX/UI, Design Systems</span>
+                        </div>
+                        <div class="list flex flex-col ">
+                            <span class="text-white/40 text-[12px] font-semibold">LANGUAGES</span>
+                            <span class="text-white font-semibold">Czech, English</span>
+                        </div>
+                        <div class="list flex flex-col ">
+                            <span class="text-white/40 text-[12px] font-semibold">OPEN FOR</span>
+                            <span class="text-white font-semibold">Smaller freelance work</span>
+                        </div>
+                    </div>
+                    <!-- image -->
+                    <div class="w-full introImage ">
+                        <img class="h-full  border border-orange-700/60  w-full object-cover" src="https://www.ulrychkristian.cz/_next/image?url=%2Fimages%2Fhero_portrait.jpeg&w=640&q=75" alt="" srcset="">
+                    </div>
+
+
+                </div>
+
+            </div>
+            
+
+        </main>
+        <!-- video section -->
+         <div class="autoImage flex h-[50%] justify-center  px-11 py-6 transition-all ease duration-300">
+            <img class="image h-full w-full  transition-alll duration-500  object-cover" src="" alt="">
+         </div>
+
+         <!-- project section -->
+        <div class="projectContainer mt-[40vh] px-11">
+            <div> 
+                <h1 class="text-white text-[8vh] mb-10 Font-serif">Selected work</h1>
+            </div>
+            <div class="grid grid-cols-2 gap-10">
+                <div class=" Projectcard flex flex-col gap-4 mb-60" >
+                <!-- image -->
+                    <div class=" h-[50rem]"><img class="h-full w-full object-cover" src="https://www.ulrychkristian.cz/_next/image?url=%2Fimages%2Feqvista%2Feqvista_thumbnail.jpg&w=750&q=75" alt="" srcset=""></div>
+                    <!-- text -->
+                    <div class="text-white flex flex-col gap-2">
+                        <span class="inline-block flex justify-between">
+                            <h1 class="text-xl font-semibold">Eqvista</h1>
+                            <span class="text-white/50">2025-2026</span>
+                        </span>
+                        <p class="text-sm text-white/50">Mobile app design for an equity management platform,<br>focused on clarity, dashboards and financial data.</p>
+                    </div>
+                </div>
+
+                <div class=" Projectcard flex flex-col gap-4 mt-60" >
+                <!-- image -->
+                    <div class=" h-[50rem]"><img class="h-full w-full object-cover" src="https://www.ulrychkristian.cz/_next/image?url=%2Fimages%2Fveevoy%2Fveevoy_thumbnail.png&w=750&q=75" alt="" srcset=""></div>
+                    <!-- text -->
+                    <div class="text-white flex flex-col gap-2">
+                        <span class="inline-block flex justify-between">
+                            <h1 class="text-xl font-semibold">Veevoy web</h1>
+                            <span class="text-white/50">2025-2026</span>
+                        </span>
+                        <p class="text-sm text-white/50">Website and visual direction for a software studio building<br>digital healthcare products.</p>
+                    </div>
+                </div>
+
+
+                <div class=" Projectcard flex flex-col gap-4 mb-60" >
+                <!-- image -->
+                    <div class=" h-[50rem]"><img class="h-full w-full object-cover" src="https://www.ulrychkristian.cz/_next/image?url=%2Fimages%2Ftelemedicine%2Ftelemedicine-thumbnail.png&w=750&q=75" alt="" srcset=""></div>
+                    <!-- text -->
+                    <div class="text-white flex flex-col gap-2">
+                        <span class="inline-block flex justify-between">
+                            <h1 class="text-xl font-semibold">Telemedicine portal</h1>
+                            <span class=" text-white/50">2025-2026</span>
+                        </span>
+                        <p class="text-sm text-white/50">Doctor-facing web platform for online consultations,<br>patient management and healthcare workflows.</p>
+                    </div>
+                </div>
+
+
+                <div class=" Projectcard flex flex-col gap-4 mt-60" >
+                <!-- image -->
+                    <div class=" h-[50rem]"><img class="h-full w-full object-cover" src="https://www.ulrychkristian.cz/_next/image?url=%2Fimages%2Fmapwhizz%2Fmapwhizz-thumbnail.png&w=750&q=75" alt="" srcset=""></div>
+                    <!-- text -->
+                    <div class="text-white flex flex-col gap-2">
+                        <span class="inline-block flex justify-between">
+                            <h1 class="text-xl font-semibold">Mapwhizz</h1>
+                            <span class=" text-white/50">2026</span>
+                        </span>
+                        <p class="text-sm text-white/50">B2B product redesign for office location analysis,<br>commute insights and workplace planning.</p>
+                    </div>
+                </div>
+
+
+                <div class=" Projectcard flex flex-col gap-4 mb-60" >
+                <!-- image -->
+                    <div class=" h-[50rem]"><img class="h-full w-full object-cover" src="https://www.ulrychkristian.cz/_next/image?url=%2Fimages%2Fsportelo%2Fsportelo_thumbnail.png&w=750&q=75" alt="" srcset=""></div>
+                    <!-- text -->
+                    <div class="text-white flex flex-col gap-2">
+                        <span class="inline-block flex justify-between">
+                            <h1 class="text-xl font-semibold">Sportelo</h1>
+                            <span class=" text-white/50">2025-2026</span>
+                        </span>
+                        <p class="text-sm text-white/50">Product and visual direction for a sports platform,<br>combining community, content and digital services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills section -->
+         <div class="skillsSection">
+
+         </div>
+
+    </div>
+    <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="animation.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
