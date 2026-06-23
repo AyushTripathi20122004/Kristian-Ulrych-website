@@ -1,5 +1,6 @@
 // smooth scrolling
 // Initialize Lenis
+
 const lenis = new Lenis();
 
 // Use requestAnimationFrame to continuously update the scroll
