@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 const navTl=gsap.timeline({ defaults: { duration: 0.4 } });
 navTl.from('.navbar',{
     y:20,
@@ -55,3 +57,36 @@ gsap.from(".autoImage", {
         scroller:'body'
     }
 });
+
+// projectContainer animation here
+
+const projectTl=gsap.timeline({
+    scrollTrigger:{
+        trigger:'.projectContainer',
+        scroller:'body',
+        markers:false,
+        top:'30% top'
+    }
+})
+projectTl.from('.projectHeader',{
+    opacity:0,
+    filter:'blur(10px)',
+    ease:'power1.in',
+    duration:1
+})
+
+const cards=document.querySelectorAll('.Projectcard');
+
+cards.forEach((Img)=>{
+    gsap.from(Img,{
+        opacity:0,
+        filter:'blur(10px)',
+        ease:'power1.in',
+        scrollTrigger:{
+        trigger:Img,
+        scroller:'body',
+        markers:false,
+        top:'top top'
+    }
+    })
+})
