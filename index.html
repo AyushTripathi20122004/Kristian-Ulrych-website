@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice website</title>
+    <title>Kristian Ulrych</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,16 +32,20 @@
         }
     </style>
 </head>
-<body class="bg-[#121417] flex justify-center ">
-    
+<body class="bg-[#121417] flex flex-col   justify-center ">
+    <!-- mouseFollow Animation -->
+    <div class=" mouseFollow rounded-full h-7 w-7 border absolute top-0  z-[999] border-white pointer-events-none"></div>
+
     <div class="container_main relative max-w-[1400px]">
-        <div class=" h-[30vh]  bg-white items-center justify-center flex flex-col gap-6 text-black w-[40px] fixed top-[50%] right-0">
+        
+
+        <div class=" h-[30vh]  bg-white items-center justify-center z-[999] flex flex-col gap-6 text-black w-[40px] fixed top-[50%] right-0">
             <div class="font-semibold text-2xl">W<span class="text-4xl">.</span></div>
             <div class="rotate-[90deg] font-semibold">
                 Nominee
             </div>
         </div>
-        <nav class="z-[99] navbar flex justify-between backdrop-blur-xl sticky top-0 px-11 py-6 border-b border-white/10">
+        <nav class="z-[99] navbar  flex justify-between w-screen backdrop-blur-xl sticky top-0 px-11 py-6 border-b border-white/10">
             <div class=" logo flex gap-5 text-white items-center">
                 <h1 class="text-white/90 text-sm">
                     Kristian Ulrych
@@ -48,25 +54,49 @@
                     Digital Product Designer
                 </h1>
             </div>
-            <div>
-                <ul class=" Iconlist flex g gap-2 items-center">
+            <div >
+                <ul class=" Iconlist lg:flex hidden  gap-2 items-center">
                     <li>
                         <a href="" class="text-white/70 text-[16px] text-semibold px-5 py-2">Work</a>
                     </li>
                     <li><a href="" class="text-white/70 text-[16px] text-semibold px-5 py-2">About</a></li>
                     <li><Button class="px-5  py-1.5 rounded-full border text-[16px] border-white/50 text-white flex items-center gap-2 ">En <i class="bi bi-chevron-down"></i></Button></li>
-                    <li><Button class="GetInTouchbtn px-10 text-[16px] py-1.5 rounded-full border border-black/10 hover:border-white/50 bg-white text-black hover:text-white hover:bg-black transition-all duration-300" >Get in touch</Button></li>
+                    <li><Button  class="GetInTouchbtn px-10 text-[16px] py-1.5 rounded-full border border-black/10 hover:border-white/50 bg-white text-black hover:text-white hover:bg-black transition-all duration-300" >Get in touch</Button></li>
                 </ul>
+                <!-- responsive side bard opening btn -->
+                <div class=" siderbtnWrapper lg:hidden block">
+                    <button class="sideBarBtn">
+                        <i class="bi bi-list text-white text-4xl"></i>
+                    </button>
+                </div>
 
+            </div>
+            <!-- responsive side bar  -->
+
+            <div class="sidebar hidden absolute p-10 h-screen bg-black border border-white w-screen top-0 left-0" >
+                <div class="leaveSidebar rounded-full bg-white h-10 w-10 absolute top-1 flex items-center justify-center">
+                    <i class="bi text-xl font-extrabold bi-arrow-left"></i>
+                </div>
+                <ul class=" sideIconListr  flex flex-col  gap-2   px-10 py-10">
+                    <li>
+                        <a href="" class="text-white/70 text-[5rem] text-semibold px-5 py-2">Work</a>
+                    </li>
+                    <li><a href="" class="text-white/70 text-[5rem] text-semibold px-5 py-2">About</a></li>
+                    <div class="flex flex-col gap-2">
+                        <li><Button class="px-5 w-[50%] py-3 rounded-full border text-[16px] border-white/50 text-white flex items-center gap-2 ">En <i class="bi bi-chevron-down"></i></Button></li>
+                        <li><Button  class="GetInTouchbtn sidebarGIt w-full px-10 text-[16px] py-3 rounded-full border border-black/10 hover:border-white/50 bg-white text-black hover:text-white hover:bg-black transition-all duration-300" >Get in touch</Button></li>
+                    </div>
+                </ul>
             </div>
         </nav>
 
         <div class="MainSection">
+           
             <!-- intro of the website -->
         <main>
             <!-- herotext secition -->
-            <div class="py-10   px-11">
-                <h1 class="HeroText text-white text-[12vh]  Font-serif leading-[13vh]">
+            <div class="py-10   lg:px-11">
+                <h1 class="HeroText text-white lg:px-0 px-6 lg:text-[12vh] md:text-[4rem] text-[2.5rem]  Font-serif lg:leading-[13vh]">
                     <span class="inline-block">Designer based in</span>
                     <span class="inline-block underline decoration-2 underline-offset-8 decoration-indigo-600 bg-gradient-to-br from-indigo-100 via-80% via-indigo-500 to-indigo-900 text-transparent bg-clip-text italic opacity-80">
                     Prague.
@@ -77,9 +107,9 @@
                     <span class="inline-block">with clarity and character.</span>
                 </h1>
                 <!-- image and text section -->
-                <div class="flex h-screen mt-20">
+                <div class="flex lg:flex-row    flex-col h-screen mt-20">
                     <!-- text -->
-                    <div class="w-full h-fit gap-2 grid grid-cols-2  ">
+                    <div class="w-full h-fit lg:px-0 md:px-6 px-6 gap-2 grid grid-cols-2  ">
                         <div class="list flex flex-col ">
                             <span class="text-white/40 text-[12px] font-semibold">BASED</span>
                             <span class="text-white font-semibold">Prague,Czechia</span>
@@ -98,7 +128,7 @@
                         </div>
                     </div>
                     <!-- image -->
-                    <div class="w-full introImage ">
+                    <div class="w-full lg:h-full md:h-full h-[120vh] lg:mt-0 mt-4 introImage ">
                         <img class="h-full  border border-orange-700/60  w-full object-cover" src="https://www.ulrychkristian.cz/_next/image?url=%2Fimages%2Fhero_portrait.jpeg&w=640&q=75" alt="" srcset="">
                     </div>
 
@@ -110,22 +140,22 @@
 
         </main>
         <!-- video section -->
-         <div class="autoImage flex h-[50rem] border-0 overflow-hidden justify-center  px-11 py-6 transition-all ease duration-300">
+         <div class="autoImage flex h-[50rem] border-0  justify-center lg:px-11 lg:overflow-hidden   py-6 transition-all ease duration-300">
             <img class="image h-full w-full  transition-alll duration-500  object-cover" src="" alt="">
          </div>
 
          <!-- project section -->
-        <div class="projectContainer mt-[40vh] px-11">
+        <div class="projectContainer mt-[40vh] lg:px-11 md:px-11">
             <div> 
-                <h1 class="text-white text-[8vh] mb-10 Font-serif projectHeader">Selected work</h1>
+                <h1 class="text-white lg:text-[8vh] text-[6vh] lg:px-0 md:px-0 px-2 md:text-[8vh] mb-10 Font-serif projectHeader">Selected work</h1>
             </div>
-            <div class="grid grid-cols-2 gap-10">
+            <div class="lg:grid  lg:grid-cols-2 flex flex-col lg:gap-10 md:gap-5 gap-10  gap-10">
 
-                <div class=" Projectcard flex flex-col gap-4 mb-60" >
+                <div class=" Projectcard flex flex-col gap-4 lg:mb-60  mb-6 " >
                 <!-- image -->
                     <div class="  h-[50rem]"><img class="h-full w-full object-cover" src="https://www.ulrychkristian.cz/_next/image?url=%2Fimages%2Feqvista%2Feqvista_thumbnail.jpg&w=750&q=75" alt="" srcset=""></div>
                     <!-- text -->
-                    <div class=" text-white flex flex-col gap-2">
+                    <div class=" text-white flex flex-col gap-2 lg:px-0 md:px-0 px-11">
                         <span class="inline-block flex justify-between">
                             <h1 class="text-xl font-semibold">Eqvista</h1>
                             <span class="text-white/50">2025-2026</span>
@@ -134,11 +164,11 @@
                     </div>
                 </div>
 
-                <div class=" Projectcard flex flex-col gap-4 mt-60" >
+                <div class=" Projectcard flex flex-col gap-4 lg:mt-60 mb-6" >
                 <!-- image -->
                     <div class=" h-[50rem]"><img class="h-full w-full object-cover" src="https://www.ulrychkristian.cz/_next/image?url=%2Fimages%2Fveevoy%2Fveevoy_thumbnail.png&w=750&q=75" alt="" srcset=""></div>
                     <!-- text -->
-                    <div class="text-white flex flex-col gap-2">
+                    <div class="text-white flex flex-col gap-2 lg:px-0 md:px-0 px-11">
                         <span class="inline-block flex justify-between">
                             <h1 class="text-xl font-semibold">Veevoy web</h1>
                             <span class="text-white/50">2025-2026</span>
@@ -148,11 +178,11 @@
                 </div>
 
 
-                <div class=" Projectcard flex flex-col gap-4 mb-60" >
+                <div class=" Projectcard flex flex-col gap-4 lg:mb-60 mb-6" >
                 <!-- image -->
                     <div class=" h-[50rem]"><img class="h-full w-full object-cover" src="https://www.ulrychkristian.cz/_next/image?url=%2Fimages%2Ftelemedicine%2Ftelemedicine-thumbnail.png&w=750&q=75" alt="" srcset=""></div>
                     <!-- text -->
-                    <div class="text-white flex flex-col gap-2">
+                    <div class="text-white flex flex-col gap-2 lg:px-0 md:px-0 px-11">
                         <span class="inline-block flex justify-between">
                             <h1 class="text-xl font-semibold">Telemedicine portal</h1>
                             <span class=" text-white/50">2025-2026</span>
@@ -162,11 +192,11 @@
                 </div>
 
 
-                <div class=" Projectcard flex flex-col gap-4 mt-60" >
+                <div class=" Projectcard flex flex-col gap-4 lg:mt-60 mb-6" >
                 <!-- image -->
                     <div class=" h-[50rem]"><img class="h-full w-full object-cover" src="https://www.ulrychkristian.cz/_next/image?url=%2Fimages%2Fmapwhizz%2Fmapwhizz-thumbnail.png&w=750&q=75" alt="" srcset=""></div>
                     <!-- text -->
-                    <div class="text-white flex flex-col gap-2">
+                    <div class="text-white flex flex-col gap-2 lg:px-0 md:px-0 px-11">
                         <span class="inline-block flex justify-between">
                             <h1 class="text-xl font-semibold">Mapwhizz</h1>
                             <span class=" text-white/50">2026</span>
@@ -176,11 +206,11 @@
                 </div>
 
 
-                <div class=" Projectcard flex flex-col gap-4 mb-60" >
+                <div class=" Projectcard flex flex-col gap-4 lg:mb-60 mb-6" >
                 <!-- image -->
                     <div class=" h-[50rem]"><img class="h-full w-full object-cover" src="https://www.ulrychkristian.cz/_next/image?url=%2Fimages%2Fsportelo%2Fsportelo_thumbnail.png&w=750&q=75" alt="" srcset=""></div>
                     <!-- text -->
-                    <div class="text-white flex flex-col gap-2">
+                    <div class="text-white flex flex-col gap-2 lg:px-0 md:px-0 px-11">
                         <span class="inline-block flex justify-between">
                             <h1 class="text-xl font-semibold">Sportelo</h1>
                             <span class=" text-white/50">2025-2026</span>
@@ -193,10 +223,11 @@
 
         <!-- Skills section -->
         <div class="px-11">
-            <div> <h1 class="text-center text-[8vh] text-white Font-serif py-16">What I Do</h1></div>
-            <div class="skillsSection  grid grid-cols-3  ">
+            <div> <h1 class="text-center lg:text-[8vh] text-[6vh] md:text-[8vh] text-white Font-serif py-16">What I Do</h1></div>
+            <div class="skillsSection  lg:grid md:grid lg:grid-cols-3 flex flex-col md:grid-cols-3  lg:gap-0 md:gap-0 gap-10  ">
             
-                <div class='skillCard text-white/50 p-10 flex flex-col gap-6 border-t border-b border-white/50  justify-between'>
+                <div class='skillCard text-white/50 p-10 flex flex-col gap-6 lg:border-t md:border-t border border-b border-white/50  justify-between'>
+
                     <div class="text-sm">01</div>
                     <div class="Font-serif text-2xl text-white">Product design</div>
                     <div class="text-sm text-white/50">
@@ -216,7 +247,7 @@
                     </div>
 
                 </div>
-                <div class='skillCard text-white/50 p-10 flex flex-col border border-white/50 border-r-0 gap-6  justify-between'>
+                <div class='skillCard text-white/50 p-10 flex flex-col border border-white/50 lg:border-r md:border-r gap-6  justify-between'>
                     <div class="text-sm">03</div>
                     <div class="Font-serif text-2xl text-white">Interface direction</div>
                     <div class="text-sm text-white/50">
@@ -226,7 +257,7 @@
 
                 </div>
 
-                <div class='skillCard text-white/50 p-10 flex flex-col gap-6 border-b border-white/50 justify-between'>
+                <div class='skillCard text-white/50 p-10 flex flex-col gap-6 lg:borer-b md:border-b border border-white/50 justify-between'>
                     <div class="text-sm">04</div>
                     <div class="Font-serif text-2xl text-white">Web design</div>
                     <div class="text-sm text-white/50">
@@ -237,7 +268,7 @@
 
                 </div>
 
-                <div class='skillCard text-white/50 p-10 border border-white/50 border-t-0 flex flex-col gap-6  justify-between'>
+                <div class='skillCard text-white/50 p-10 border border-white/50 lg:border-t-0 md:border-t-0 flex flex-col gap-6  justify-between'>
                     <div class="text-sm">05</div>
                     <div class="Font-serif text-2xl text-white">Brand identity</div>
                     <div class="text-sm text-white/50">
@@ -248,7 +279,7 @@
 
                 </div>
 
-                <div class='skillCard text-white/50 p-10 flex border-b border-white/50  flex-col gap-6  justify-between'>
+                <div class='skillCard text-white/50 p-10 flex lg:border-b border md:border-b border-white/50  flex-col gap-6  justify-between'>
                     <div class="text-sm">06</div>
                     <div class="Font-serif text-2xl text-white">Advisory & audits</div>
                     <div class="text-sm text-white/50">
@@ -257,7 +288,7 @@
 
                 </div>
             </div>
-            <div class="flex justify-between py-16 border-b border-white/50 ">
+            <div class="flex lg:flex-row flex-col lg:gap-0 md:gap-0 gap-10 md:flex-row justify-between py-16 border-b border-white/50 ">
                 <h1 class=" bg-gradient-to-br from-indigo-100 via-80% via-indigo-500 to-indigo-900 text-transparent bg-clip-text text-2xl
                 font-thin Font-serif ">
                     Have a project in mind? Let’s talk.
@@ -271,9 +302,9 @@
         <!-- kind word -->
          <div class="px-11 flex flex-col mt-[40vh] ">
             <div>
-                <h1 class="text-[8vh] Font-serif py-16 bor  text-white">Kind Words</h1>
+                <h1 class="lg:text-[8vh] text-[6vh] md:text-[8vh] Font-serif py-16 bor  text-white">Kind Words</h1>
             </div>
-            <div class="border border-white/50 border-l-0 text-white flex justify-between border-r-0 py-10">
+            <div class="border border-white/50 border-l-0 text-white flex lg:flex-row flex-col md:flex-row justify-between border-r-0 py-10">
                 <div class="Font-serif text-lg text-white/90 leading-relaxed ">
                     “I’ve been working with Kristián for over two years, and he always delivers top-notch work. He<br>has contributed to the creation of the visual identity, graphic materials, animations, and 3D<br>designs for our virtual F1 league, and his work has had a significant impact on the growth and<br>perception of the entire community. I appreciate his prompt communication, creativity,<br>technical precision, and ability to deliver high-quality results even under tight deadlines. I can<br>wholeheartedly recommend working with him.”
 
@@ -291,11 +322,11 @@
 
          <div class="px-11 mt-[40vh]">
             <div>
-                <h1 class=" text-[8vh] text-white Font-serif py-16 ">Things worth sharing</h1>
+                <h1 class=" lg:text-[8vh] text-[6vh] md:text-[8vh] text-white Font-serif py-16  ">Things worth sharing</h1>
             </div>
-            <div class="flex gap-4">
+            <div class="flex lg:flex-row lg:gap-10  gap-[10vh] flex-col  gap-4">
                 <!-- card1 -->
-                <div class=" w-[30vw] ">
+                <div class=" lg:w-[30vw] ">
                     
                     <div class=" h-[36vh] w-full">
                         <img class="h-full w-full object-cover" src="https://www.ulrychkristian.cz/_next/image?url=%2Fimages%2Farticles%2Fferrari%2Fferrari1.png&w=640&q=75" alt="" srcset="">
@@ -311,7 +342,7 @@
                 </div>
 
                 <!-- card2  -->
-                <div class=" w-[30vw] flex flex-col">
+                <div class=" lg:w-[30vw] flex flex-col">
                     <div class=" h-[36vh] w-full">
                         <img class="h-full w-full object-cover" src="https://www.ulrychkristian.cz/_next/image?url=%2Fimages%2Frb18%2Fthumbnail.jpeg&w=640&q=75" alt="" srcset="">
                     </div>
@@ -327,25 +358,111 @@
 
             </div>
          </div>
-        </div>
+
 
         <!-- lets work together -->
 
         <div class="px-11 mt-[40vh] ">
             <span class="inline-block text-white/50">Let’s work together</span>
             <div class="">
-                <h1 class="email-heading bg-gradient-to-br from-yellow-50 via-90% via-indigo-500 to-indigo-900  w-fit text-transparent bg-clip-text text-[15vh]
+                <h1 class="email-heading bg-gradient-to-br from-yellow-50 via-90% via-indigo-500 to-indigo-900  w-fit text-transparent bg-clip-text lg:text-[15vh] md:text-[5vh] text-[2.5vh]
                  Font-serif">kristian.ulrych@gmail.com
                  <div class='EmailUnderline bg-gradient-to-br from-yellow-50 via-90% via-indigo-500 to-indigo-900'>
 
                  </div>
                  </h1>
             </div>
+        </div>
+        </div>
 
+        <div style="display: none;" class="formSection " >
+
+            <div class="GetInTouchSection flex w-full px-11 relative py-10">
+        
+        <div class="leaveForm rounded-full bg-white h-10 w-10 absolute top-1 flex items-center justify-center">
+            <i class="bi text-xl font-extrabold bi-arrow-left"></i>
+        </div>
+
+        <!-- Hero text -->
+        <div class="flex flex-col w-full gap-10">
+            <h1 class="text-[10vh] w-fit text-white Font-serif leading-tight">
+                Let’s build<br>something worth<br>shipping.
+            </h1>
+
+            <p class="text-white w-fit">
+                Briefs, collaborations, or a quick question — drop a note. I<br>
+                read everything and usually reply within a couple of working<br>
+                days.
+            </p>
+
+            <span class="bg-gradient-to-br from-indigo-100 via-80% via-indigo-500 to-indigo-900 text-transparent bg-clip-text text-xl text-thin">
+                kristian.ulrych@gmail.com
+            </span>
+        </div>
+
+        <!-- Form -->
+        <div class="w-full ">
+
+            <form method="post" action="InsertData.php" class="w-full flex flex-col gap-8">
+
+                <!-- Name and Email -->
+                <div class="grid grid-cols-2 gap-10">
+
+                    <div class="flex flex-col border-b border-white/20">
+                        <label class="uppercase text-white/50">Name</label>
+                        <input
+                            class="py-4 text-white focus:outline-none placeholder:text-white/40 bg-transparent"
+                            name="Name"
+                            placeholder="Your name"
+                            type="text">
+                    </div>
+
+                    <div class="flex flex-col border-b border-white/20">
+                        <label class="uppercase text-white/50">Email</label>
+                        <input
+                            class="py-4 focus:outline-none placeholder:text-white/40 text-white bg-transparent"
+                            name="Email"
+                            placeholder="you@domain.com"
+                            type="email">
+                    </div>
+
+                </div>
+
+                <!-- Subject -->
+                <div class="flex flex-col border-b border-white/20">
+                    <label class="uppercase text-white/50">Subject</label>
+                    <input
+                        class="py-4 focus:outline-none placeholder:text-white/40 text-white bg-transparent"
+                        name="Subject"
+                        placeholder="What it's about?"
+                        type="text">
+                </div>
+
+                <!-- Message -->
+                <div class="flex flex-col border-b border-white/20">
+                    <label class="uppercase text-white/50">Message</label>
+                    <textarea
+                        class="min-h-[30vh] py-4 text-white focus:outline-none placeholder:text-white/40 bg-transparent"
+                        name="Message"
+                        placeholder="Tell me bit about the project, timeline, or anything useful."></textarea>
+                </div>
+
+                <!-- submit btn -->
+                <div class="mt-6">
+                    <button type="submit" name="submit" class="bg-white rounded-full px-10 py-3">Send Message</button>
+                </div>
+
+            </form>
+        </div>
 
         </div>
-        <footer class="px-11 py-10 mt-10 flex justify-between items-center">
-            <div class="flex gap-10 text-[16px] text-white/50">
+
+        
+        </div>
+
+        <!-- footer -->
+        <div class="px-11  py-10 lg:mt-10 lg:flex-row md:flex-row flex-col lg:gap-0 gap-10 flex justify-between lg:items-center">
+            <div class="flex lg:flex-row flex-col lg:gap-10 gap-2 text-[16px] text-white/50">
                 <span>
                     Designed and built by Kristian Ulrych
                 </span>
@@ -376,57 +493,9 @@
                 </button>
 
              </div>
-        </footer>
-
-        
-    </div>
-        
-        <div style="display: none" class="GetInTouchSection flex w-full px-11 py-10">
-            <!-- Herotext -->
-            <div class="flex flex-col w-full gap-10">
-                <h1 class="text-[10vh]  w-fit text-white Font-serif leading-tight" >
-                    Let’s build<br>something worth<br>shipping.
-                </h1>
-                <p class="text-white w-fit">
-                    Briefs, collaborations, or a quick question — drop a note. I<br>read everything and usually reply within a couple of working<br>days.
-                </p>
-                <span class="bg-gradient-to-br from-indigo-100 via-80% via-indigo-500 to-indigo-900 text-transparent bg-clip-text text-xl text-thin">
-                    kristian.ulrych@gmail.com
-                </span>
-
-            </div>
-            <!-- form -->
-            <div class="w-full">
-                <form class="w-full flex flex-col gap-8">
-                    <!-- name and email -->
-                    <div class="grid grid-cols-2 gap-10 " >
-                        <!-- name -->
-                        <div class="flex flex-col  border-b border-white/20 ">
-                            <label class="uppercase text-white/50 ">Name</label>
-                            <input class=" py-4 text-white focus:outline-none   placeholder:text-white/40 bg-transparent" name="Name" placeholder="Your name" type="text">
-                        </div>
-                        <!-- email -->
-                         <div class=" flex flex-col  border-b border-white/20 ">
-                            <label class="uppercase text-white/50 ">email</label>
-                            <input class="py-4  focus:outline-none  placeholder:text-white/40 text-white bg-transparent"  name="Email" placeholder="you@domain.com" type="email">
-                        </div>
-                    </div>
-
-                    <!-- what it's about  -->
-                    <div class="flex flex-col  border-b border-white/20 ">
-                        <label class="uppercase text-white/50 ">subject</label>
-                        <input class=" py-4  focus:outline-none  placeholder:text-white/40 text-white bg-transparent"   name="Subject" placeholder="What it's about?" type="text">
-                    </div>
-
-                    <!-- message -->
-                    <div class="flex flex-col  border-b border-white/20 ">
-                        <label class="uppercase text-white/50 ">Message</label>
-                        <textarea class=" min-h-[30vh] py-4 text-white focus:outline-none  placeholder:text-white/40 bg-transparent"   name="Subject" placeholder="Tell me bit about the project, timeline, or anything useful." type="text"></textarea>
-                    </div>
-                </form>
-            </div>
-
         </div>
+         
+
     </div>
     <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
