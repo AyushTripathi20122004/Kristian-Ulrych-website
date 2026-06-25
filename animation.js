@@ -90,3 +90,10 @@ cards.forEach((Img)=>{
     }
     })
 })
+
+window.addEventListener('mousemove', (e) => {
+    gsap.to('.mouseFollow', {
+        x: e.clientX,
+        y: e.clientY
+    });
+});
