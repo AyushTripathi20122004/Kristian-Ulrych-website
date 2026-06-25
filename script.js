@@ -1,6 +1,5 @@
 // smooth scrolling
 // Initialize Lenis
-
 const lenis = new Lenis();
 
 // Use requestAnimationFrame to continuously update the scroll
@@ -47,14 +46,56 @@ setInterval(()=>{
 },2500)
 
 
-// get in touch button page start here
 
-const GetInTouchbtn=document.querySelector('.GetInTouchbtn');
-const FormWindow=document.querySelector('.GetInTouchSection')
-const MainSection=document.querySelector('.MainSection');
-GetInTouchbtn.addEventListener('click',()=>{
-    console.log('btn clicked');
-    
-    MainSection.style.display='none';
-    FormWindow.style.display='flex';
+const MainSection = document.querySelector('.MainSection');
+const formSection = document.querySelector('.formSection');
+const GetInTouchbtn = document.querySelectorAll('.GetInTouchbtn');
+
+// show form section
+GetInTouchbtn.forEach(elem => {
+    elem.addEventListener('click', () => {
+        MainSection.style.display = 'none';
+        formSection.style.display = 'block';
+    });
+});
+
+// leave form btn
+const leaveForm = document.querySelector('.leaveForm');
+
+leaveForm.addEventListener('click', () => {
+    MainSection.style.display = 'block';
+    formSection.style.display = 'none';
+});
+
+// sidebar btn
+
+const sideBarBtn=document.querySelector('.sideBarBtn')
+const sidebar=document.querySelector('.sidebar')
+sideBarBtn.addEventListener('click',()=>{
+    if(sidebar.classList.contains('hidden')){
+        sidebar.classList.remove('hidden');
+        sidebar.classList.add('block');
+        // icons animation
+        gsap.from('.sideIconListr li',{
+            y:20,
+            opacity:0,
+            filter:'blur(10px)',
+            ease:'back.out(1.5)',
+            stagger:0.2
+        })
+    }
+})
+
+const leaveSidebar=document.querySelector('.leaveSidebar')
+leaveSidebar.addEventListener('click',()=>{
+    if(sidebar.classList.contains('block')){
+        sidebar.classList.remove('block');
+        sidebar.classList.add('hidden');
+    }
+})
+document.querySelector('.sidebarGIt').addEventListener('click',()=>{
+    if(sidebar.classList.contains('block')){
+        sidebar.classList.remove('block');
+        sidebar.classList.add('hidden');
+    }
 })
